@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Lucas.Dev — desenvolvimento web com uma identidade inspirada em Van Gogh.">
+  <meta name="theme-color" content="#07152a">
+  <title>Lucas.Dev — Noite Estrelada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+  <div class="paint-noise" aria-hidden="true"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#inicio" aria-label="Lucas.Dev início">
+      <span>Lucas.Dev</span><b>✦</b>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegação principal">
+      <a class="active" href="#inicio">Início</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#contato">Contato</a>
+    </nav>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Alternar atmosfera">
+      <span>☀</span><i></i><span>☾</span>
+    </button>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio">Início</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#contato">Contato</a>
+  </div>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="sky">
+        <div class="moon moon-1"></div>
+        <div class="moon moon-2"></div>
+        <div class="star s1"></div><div class="star s2"></div><div class="star s3"></div>
+        <div class="star s4"></div><div class="star s5"></div><div class="star s6"></div>
+        <div class="swirl swirl-a"></div>
+        <div class="swirl swirl-b"></div>
+        <div class="swirl swirl-c"></div>
+        <div class="swirl swirl-d"></div>
+        <div class="swirl swirl-e"></div>
+      </div>
+
+      <div class="hero-glow"></div>
+
+      <div class="hill hill-back"></div>
+      <div class="hill hill-front"></div>
+      <div class="cypress" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="village" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+
+      <div class="hero-content reveal">
+        <p class="eyebrow">OLÁ, EU SOU <span></span></p>
+        <h1><strong>Lucas</strong><em>.Dev</em><small>✦</small></h1>
+        <p class="hero-copy">
+          Desenvolvedor em formação, apaixonado por tecnologia,
+          programação e por criar experiências que fazem sentido.
+        </p>
+
+        <div class="hero-actions">
+          <a class="paint-btn" href="#projetos">Ver projetos <span>→</span></a>
+          <a class="text-btn" href="#contato">Entrar em contato <span>✉</span></a>
+        </div>
+      </div>
+
+      <div class="quote reveal">
+        <span>“</span>
+        Grandes ideias também<br>nascem no silêncio.
+        <small>— Lucas.Dev</small>
+      </div>
+
+      <div class="ground-brush"></div>
+      <div class="scroll-hint">ROLE PARA EXPLORAR <b>↓</b></div>
+    </section>
+
+    <section class="projects-section" id="projetos">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">MEUS PROJETOS <span></span></p>
+          <h2>O que estou <em>criando.</em></h2>
+        </div>
+        <a href="#contato" class="view-all">Vamos conversar <span>→</span></a>
+      </div>
+
+      <div class="projects-layout">
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-art dog-art">
+              <div class="paint-sun"></div>
+              <div class="paint-dog">●</div>
+              <div class="paint-hill"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">
+                <h3>Adotaê <span>🐾</span></h3>
+                <a href="https://lucas248-art.github.io/ADOTA-/" target="_blank" rel="noopener">↗</a>
+              </div>
+              <p>Uma plataforma para conectar pessoas a animais que precisam de um lar.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art field-art">
+              <div class="paint-sun sun-small"></div>
+              <div class="wheat"></div>
+              <div class="field-tree t1"></div><div class="field-tree t2"></div><div class="field-tree t3"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">
+                <h3>Portfólio <span>⌘</span></h3>
+                <a href="#inicio">↗</a>
+              </div>
+              <p>Meu espaço pessoal para mostrar projetos, habilidades e minha jornada como dev.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art river-art">
+              <div class="river-moon"></div>
+              <div class="river-city"></div>
+              <div class="reflection r1"></div><div class="reflection r2"></div><div class="reflection r3"></div>
+            </div>
+            <div class="project-body">
+              <div class="project-title">
+                <h3>Em breve... <span>✦</span></h3>
+                <span class="arrow-muted">→</span>
+              </div>
+              <p>Mais projetos estão a caminho. Esta tela ainda vai ganhar novas cores.</p>
+              <div class="tags"><span>Python</span><span>React</span><span>Node.js</span></div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="skills reveal" id="habilidades">
+          <p class="eyebrow">MINHAS <br>HABILIDADES <span></span></p>
+          <div class="skill"><b>5</b><span>HTML</span></div>
+          <div class="skill"><b>5</b><span>CSS</span></div>
+          <div class="skill"><b>JS</b><span>JavaScript</span></div>
+          <div class="skill"><b>🐍</b><span>Python</span></div>
+          <div class="skill"><b>⚛</b><span>React</span></div>
+          <div class="skill"><b>●</b><span>Git &amp; GitHub</span></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="about-section" id="sobre">
+      <div class="about-art reveal">
+        <div class="frame">
+          <div class="portrait-sun"></div>
+          <div class="portrait-moon"></div>
+          <div class="portrait-hill"></div>
+          <div class="portrait-cypress"></div>
+        </div>
+      </div>
+      <div class="about-copy reveal">
+        <p class="eyebrow">SOBRE MIM <span></span></p>
+        <h2>Aprendendo a transformar <em>ideias</em> em código.</h2>
+        <p>
+          Estou construindo minha trajetória na programação, estudando desenvolvimento
+          web e criando projetos para colocar cada novo aprendizado em prática.
+        </p>
+        <p>
+          Meu objetivo é evoluir um projeto de cada vez — com curiosidade, criatividade
+          e uma identidade que seja realmente minha.
+        </p>
+        <a class="paint-btn small" href="#contato">Falar comigo <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+      <div class="contact-inner reveal">
+        <p class="eyebrow">VAMOS CRIAR ALGO <span></span></p>
+        <h2>Uma ideia pode começar<br>com uma <em>mensagem.</em></h2>
+        <div class="contact-links">
+          <a href="mailto:seuemail@email.com">✉ <span>seuemail@email.com</span></a>
+          <a href="https://github.com/" target="_blank" rel="noopener">◉ <span>GitHub</span></a>
+          <a href="https://instagram.com/" target="_blank" rel="noopener">◎ <span>Instagram</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Lucas.Dev ✦</span>
+    <p>Sonhe, programe, conquiste.</p>
+    <small>© 2026 — feito com código e um pouco de tinta.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+                                    </html>
