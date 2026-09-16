@@ -3,10 +3,12 @@ const menuBtn = document.getElementById("menuBtn");
 const mobileMenu = document.getElementById("mobileMenu");
 const themeToggle = document.getElementById("themeToggle");
 
+// Navbar
 window.addEventListener("scroll", () => {
   nav.classList.toggle("scrolled", window.scrollY > 30);
 });
 
+// Menu mobile
 menuBtn.addEventListener("click", () => {
   mobileMenu.classList.toggle("open");
   menuBtn.textContent = mobileMenu.classList.contains("open") ? "×" : "☰";
@@ -19,10 +21,12 @@ document.querySelectorAll(".mobile-menu a").forEach(link => {
   });
 });
 
+// Alternância de atmosfera
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("day");
 });
 
+// Animações ao entrar na tela
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -32,42 +36,69 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+document.querySelectorAll(".reveal").forEach(element => observer.observe(element));
 
+// Navegação ativa
 const sections = document.querySelectorAll("main section[id]");
 const navLinks = document.querySelectorAll(".desktop-nav a");
 
 window.addEventListener("scroll", () => {
   let current = "inicio";
+
   sections.forEach(section => {
-    if (window.scrollY >= section.offsetTop - 180) current = section.id;
+    if (window.scrollY >= section.offsetTop - 180) {
+      current = section.id;
+    }
   });
 
   navLinks.forEach(link => {
-    link.classList.toggle("active", link.getAttribute("href") === "#" + current);
+    link.classList.toggle(
+      "active",
+      link.getAttribute("href") === "#" + current
+    );
   });
 });
 
+// Parallax das pinceladas
 const hero = document.querySelector(".hero");
-hero.addEventListener("pointermove", (e) => {
-  const x = (e.clientX / window.innerWidth - .5);
-  const y = (e.clientY / window.innerHeight - .5);
+const swirls = document.querySelectorAll(".swirl");
+const cypress = document.querySelector(".cypress");
 
-  document.querySelectorAll(".swirl").forEach((el, i) => {
-    const factor = (i + 1) * 4;
-    el.style.marginLeft = `${x * factor}px`;
-    el.style.marginTop = `${y * factor}px`;
+hero.addEventListener("pointermove", (event) => {
+  const x = event.clientX / window.innerWidth - 0.5;
+  const y = event.clientY / window.innerHeight - 0.5;
+
+  swirls.forEach((swirl, index) => {
+    swirl.style.marginLeft = `${x * (index + 1) * 4}px`;
+    swirl.style.marginTop = `${y * (index + 1) * 2}px`;
   });
 
-  document.querySelector(".cypress").style.transform =
-    `translate(${x * -8}px, ${y * -4}px)`;
+  cypress.style.translate = `${x * -8}px ${y * -3}px`;
 });
 
 hero.addEventListener("pointerleave", () => {
-  document.querySelectorAll(".swirl").forEach(el => {
-    el.style.marginLeft = "";
-    el.style.marginTop = "";
+  swirls.forEach(swirl => {
+    swirl.style.marginLeft = "";
+    swirl.style.marginTop = "";
   });
-  document.querySelector(".cypress").style.transform = "";
+
+  cypress.style.translate = "";
 });
 
+// Efeito 3D nos cards
+document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("pointermove", (event) => {
+    if (window.innerWidth < 760) return;
+
+    const rect = card.getBoundingClientRect();
+    const x = (event.clientX - rect.left) / rect.width - 0.5;
+    const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+    card.style.transform =
+      `perspective(800px) rotateY(${x * 5}deg) rotateX(${-y * 4}deg) translateY(-8px)`;
+  });
+
+  card.addEventListener("pointerleave", () => {
+    card.style.transform = "";
+  });
+});
